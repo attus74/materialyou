@@ -1,0 +1,11 @@
+## Material You
+---
+
+name: Material You
+description: Drupal Theme Based on Material 3
+type: theme
+core_version_requirement: ^8.9 || ^9.3
+package: Material
+base theme: classy
+regions:
+  content: Content

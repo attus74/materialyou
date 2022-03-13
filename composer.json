@@ -1,0 +1,21 @@
+{
+  "name": "attus/materialyou",
+  "description": "Drupal Theme Based on Material 3",
+  "type": "drupal-theme",
+  "keywords": ["Drupal", "Material", "Material You"],
+  "homepage": "https://github.com/attus74/materialyou",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Attila Németh",
+      "email": "attus@germanicus.hu",
+      "role": "developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/attus74/materialyou/issues"
+  },
+  "require": {
+    "drupal/core": "^8.9 || ^9.3"
+  }
+}
