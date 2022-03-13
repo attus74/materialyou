@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * Material You Theme
+ *
+ * @author Attila Németh
+ * 13.03.2022
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function materialyou_form_system_theme_settings_alter(&$form, FormStateInterface $form_state)
+{
+  $form['materialyou'] = [
+    '#type' => 'details',
+    '#open' => true,
+    '#title' => t('Material You'),
+    'colors' => [
+      '#type' => 'select',
+      '#title' => t('Colors'),
+      '#default_value' => theme_get_setting('colors'),
+      '#required' => true,
+      '#options' => [
+        'default'     => t('Default'),
+        'red'         => t('Red'),
+        'green'       => t('Green'),
+        'blue'        => t('Blue'),
+        'orange'      => t('Orange'),
+      ],
+    ],
+  ];
+}
+
+function materialyou_preprocess_html(&$variables)
+{
+  $variables['attributes']['class'][] = 'material-colors-' . theme_get_setting('colors');
+}

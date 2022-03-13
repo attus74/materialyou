@@ -1,0 +1,7 @@
+## Libraries
+---
+
+materialyou:
+  css:
+    theme:
+      css/materialyou.css: {}

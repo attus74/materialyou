@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: materialyou\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Drupal Theme Based on Material 3"
+msgstr "Material 3 alapú Drupal-smink"
+
+msgid "Content"
+msgstr "Tartalom"
+
+msgid "Colors"
+msgstr "Színek"

@@ -9,3 +9,7 @@ package: Material
 base theme: classy
 regions:
   content: Content
+libraries:
+  - materialyou/materialyou
+interface translation project: materialyou
+interface translation server pattern: themes/materialyou/translations/materialyou.%language.po

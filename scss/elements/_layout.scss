@@ -1,0 +1,40 @@
+@mixin materialyou-phone-layout {
+  @media (max-width: 599px) {
+    @content
+  }
+}
+
+@mixin materialyou-phone-landscape-layout {
+  @media (max-height: 599px) and (orientation: landscape) {
+    @content
+  }
+}
+
+@mixin materialyou-tablet-layout {
+  @media (min-width: 600px) and (max-width: 839px) {
+    @content
+  }
+  @media (min-height: 600px) and (orientation: landscape) and (max-width: 839px) {
+    @content
+  }
+}
+
+@mixin materialyou-desktop-layout {
+  @media (min-width: 840px) and (min-height: 600px) {
+    @content
+  }
+}
+
+@mixin materialyou-large-layout {
+  @media (min-width: 1440px) {
+    @content
+  }
+}
+
+html {
+  body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
