@@ -12,5 +12,8 @@ msgstr "Material 3 alapú Drupal-smink"
 msgid "Content"
 msgstr "Tartalom"
 
+msgid "Top App Bar"
+msgstr "Felső Eszköztár"
+
 msgid "Colors"
 msgstr "Színek"

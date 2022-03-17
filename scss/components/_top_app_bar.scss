@@ -1,0 +1,38 @@
+@mixin materialyou-top-app-bar {
+  div {
+    &.materialyou-layout-container {
+      header {
+        &.materialyou-top-app-bar {
+          @content
+        }
+      }
+    }
+  }
+}
+
+body {
+  @include materialyou-top-app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid #d00;
+  }
+  &.toolbar-fixed {
+    @include materialyou-top-app-bar {
+      top: 39px;
+    }
+    &.toolbar-tray-open {
+      &.toolbar-horizontal {
+        @include materialyou-top-app-bar {
+          top: 79px;
+        }
+      }
+      &.toolbar-vertical {
+        @include materialyou-top-app-bar {
+          left: 15rem;
+        }
+      }
+    }
+  }
+}
