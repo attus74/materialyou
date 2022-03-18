@@ -10,16 +10,47 @@
   }
 }
 
+@mixin materialyou-top-app-bar--small {
+  height: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 0;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  @include materialyou-typography(title, large);
+  transition: background-color 250ms;
+  &.document-scrolled {
+    z-index: 32;
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    transition: background-color 250ms;
+  }
+  div {
+    &.region {
+      padding-top: 1.125rem;
+      padding-bottom: 1.125rem;
+    }
+  }
+  @include materialyou-phone-landscape-layout {
+    height: 3.5rem;
+    div {
+      &.region {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem;
+      }
+    }
+  }
+}
+
 body {
   @include materialyou-top-app-bar {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    border: 1px solid #d00;
   }
   &.toolbar-fixed {
     @include materialyou-top-app-bar {
+      position: fixed;
       top: 39px;
     }
     &.toolbar-tray-open {
@@ -34,5 +65,13 @@ body {
         }
       }
     }
+  }
+  &.materialyou-top-app-bar-fixed {
+    @include materialyou-top-app-bar {
+      position: fixed;
+    }
+  }
+  @include materialyou-top-app-bar {
+    @include materialyou-top-app-bar--small;
   }
 }

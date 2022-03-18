@@ -5,3 +5,7 @@ materialyou:
   css:
     theme:
       css/materialyou.css: {}
+  js:
+    js/materialyou.js: {}
+  dependencies:
+    - core/jquery

@@ -36,5 +36,11 @@ html {
     margin: 0;
     padding: 0;
     border: 0;
+    &.materialyou-has-top-app-bar {
+      margin-top: 5rem;
+      @mixin materialyou-phone-landscape-layout {
+        margin-top: 4.5rem;
+      }
+    }
   }
 }

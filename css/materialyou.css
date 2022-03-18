@@ -2,6 +2,8 @@ html body {
   margin: 0;
   padding: 0;
   border: 0; }
+  html body.materialyou-has-top-app-bar {
+    margin-top: 5rem; }
 
 @media (max-width: 599px) {
   html {
@@ -468,16 +470,43 @@ html body {
     color: var(--md-sys-color-on-primary-container); }
 
 body div.materialyou-layout-container header.materialyou-top-app-bar {
-  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  border: 1px solid #d00; }
+  right: 0; }
 body.toolbar-fixed div.materialyou-layout-container header.materialyou-top-app-bar {
+  position: fixed;
   top: 39px; }
 body.toolbar-fixed.toolbar-tray-open.toolbar-horizontal div.materialyou-layout-container header.materialyou-top-app-bar {
   top: 79px; }
 body.toolbar-fixed.toolbar-tray-open.toolbar-vertical div.materialyou-layout-container header.materialyou-top-app-bar {
   left: 15rem; }
+body.materialyou-top-app-bar-fixed div.materialyou-layout-container header.materialyou-top-app-bar {
+  position: fixed; }
+body div.materialyou-layout-container header.materialyou-top-app-bar {
+  height: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  z-index: 0;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  font-family: var(--md-sys-typescale-title-large-font);
+  line-height: var(--md-sys-typescale-title-large-line-height);
+  font-size: var(--md-sys-typescale-title-large-size);
+  font-weight: var(--md-sys-typescale-title-large-weight);
+  transition: background-color 250ms; }
+  body div.materialyou-layout-container header.materialyou-top-app-bar.document-scrolled {
+    z-index: 32;
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    transition: background-color 250ms; }
+  body div.materialyou-layout-container header.materialyou-top-app-bar div.region {
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem; }
+  @media (max-height: 599px) and (orientation: landscape) {
+    body div.materialyou-layout-container header.materialyou-top-app-bar {
+      height: 3.5rem; }
+      body div.materialyou-layout-container header.materialyou-top-app-bar div.region {
+        padding-top: 0.875rem;
+        padding-bottom: 0.875rem; } }
 
 /*# sourceMappingURL=materialyou.css.map */
