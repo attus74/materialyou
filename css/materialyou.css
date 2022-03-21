@@ -2,8 +2,34 @@ html body {
   margin: 0;
   padding: 0;
   border: 0; }
-  html body.materialyou-has-top-app-bar {
-    margin-top: 5rem; }
+  html body div.materialyou-layout-container {
+    padding-top: 4.5rem; }
+    @media (min-width: 840px) and (min-height: 600px) {
+      html body div.materialyou-layout-container {
+        padding-top: 5rem; } }
+  html body div.materialyou-layout-container header.materialyou-top-app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; }
+  html body.toolbar-vertical div.materialyou-layout-container {
+    padding-top: 0.5rem; }
+  html body.toolbar-vertical div.materialyou-layout-container header.materialyou-top-app-bar {
+    position: relative;
+    top: -0.5rem; }
+  html body.toolbar-vertical.document-scrolled-beyond-bar div.materialyou-layout-container {
+    padding-top: 4.5rem; }
+  html body.toolbar-vertical.document-scrolled-beyond-bar div.materialyou-layout-container header.materialyou-top-app-bar {
+    position: fixed; }
+  html body.toolbar-fixed div.materialyou-layout-container {
+    padding-top: 5rem; }
+  html body.toolbar-fixed div.materialyou-layout-container header.materialyou-top-app-bar {
+    position: fixed;
+    top: 39px; }
+  html body.toolbar-fixed.toolbar-tray-open.toolbar-vertical div.materialyou-layout-container header.materialyou-top-app-bar {
+    margin-left: 15rem; }
+  html body.toolbar-fixed.toolbar-tray-open.toolbar-horizontal div.materialyou-layout-container header.materialyou-top-app-bar {
+    top: 79px; }
 
 @media (max-width: 599px) {
   html {
@@ -461,28 +487,16 @@ html body {
 html body {
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background); }
-  html body h1, html body h2 {
+  html body div.layout-container h1, html body div.layout-container h2 {
     color: var(--md-sys-color-primary); }
-  html body a:link, html body a:visited {
+  html body div.layout-container a:link, html body div.layout-container a:visited {
     color: var(--md-sys-color-primary); }
-  html body a:hover, html body a:active {
+  html body div.layout-container a:hover, html body div.layout-container a:active {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container); }
 
 body div.materialyou-layout-container header.materialyou-top-app-bar {
-  top: 0;
-  left: 0;
-  right: 0; }
-body.toolbar-fixed div.materialyou-layout-container header.materialyou-top-app-bar {
-  position: fixed;
-  top: 39px; }
-body.toolbar-fixed.toolbar-tray-open.toolbar-horizontal div.materialyou-layout-container header.materialyou-top-app-bar {
-  top: 79px; }
-body.toolbar-fixed.toolbar-tray-open.toolbar-vertical div.materialyou-layout-container header.materialyou-top-app-bar {
-  left: 15rem; }
-body.materialyou-top-app-bar-fixed div.materialyou-layout-container header.materialyou-top-app-bar {
-  position: fixed; }
-body div.materialyou-layout-container header.materialyou-top-app-bar {
+  border: 1px dashed #d00;
   height: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -494,11 +508,6 @@ body div.materialyou-layout-container header.materialyou-top-app-bar {
   font-size: var(--md-sys-typescale-title-large-size);
   font-weight: var(--md-sys-typescale-title-large-weight);
   transition: background-color 250ms; }
-  body div.materialyou-layout-container header.materialyou-top-app-bar.document-scrolled {
-    z-index: 32;
-    background-color: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-    transition: background-color 250ms; }
   body div.materialyou-layout-container header.materialyou-top-app-bar div.region {
     padding-top: 1.125rem;
     padding-bottom: 1.125rem; }
@@ -508,5 +517,10 @@ body div.materialyou-layout-container header.materialyou-top-app-bar {
       body div.materialyou-layout-container header.materialyou-top-app-bar div.region {
         padding-top: 0.875rem;
         padding-bottom: 0.875rem; } }
+body.document-scrolled div.materialyou-layout-container header.materialyou-top-app-bar {
+  z-index: 32;
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  transition: background-color 250ms; }
 
 /*# sourceMappingURL=materialyou.css.map */

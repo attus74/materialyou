@@ -31,15 +31,76 @@
   }
 }
 
+@mixin materialyou-layout-container {
+  div {
+    &.materialyou-layout-container {
+      @content
+    }
+  }
+}
+@mixin materialyou-layout-top-app-bar {
+  @include materialyou-layout-container {
+    header {
+      &.materialyou-top-app-bar {
+        @content
+      }
+    }
+  }
+}
+
 html {
   body {
     margin: 0;
     padding: 0;
     border: 0;
-    &.materialyou-has-top-app-bar {
-      margin-top: 5rem;
-      @mixin materialyou-phone-landscape-layout {
-        margin-top: 4.5rem;
+    @include materialyou-layout-container {
+      padding-top: 4.5rem;
+      @include materialyou-desktop-layout {
+        padding-top: 5rem;
+      }
+    }
+    @include materialyou-layout-top-app-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    &.toolbar-vertical {
+      @include materialyou-layout-container {
+        padding-top: 0.5rem;
+      }
+      @include materialyou-layout-top-app-bar {
+        position: relative;
+        top: -0.5rem;
+      }
+      &.document-scrolled-beyond-bar {
+        @include materialyou-layout-container {
+          padding-top: 4.5rem;
+        }
+        @include materialyou-layout-top-app-bar {
+          position: fixed;
+        }
+      }
+    }
+    &.toolbar-fixed {
+      @include materialyou-layout-container {
+        padding-top: 5rem;
+      }
+      @include materialyou-layout-top-app-bar {
+        position: fixed;
+        top: 39px;
+      }
+      &.toolbar-tray-open {
+        &.toolbar-vertical {
+          @include materialyou-layout-top-app-bar {
+            margin-left: 15rem;
+          }
+        }
+        &.toolbar-horizontal {
+          @include materialyou-layout-top-app-bar {
+            top: 79px;
+          }
+        }
       }
     }
   }

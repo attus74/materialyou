@@ -324,16 +324,20 @@ html {
   body {
     background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-background);
-    h1, h2 {
-      color: var(--md-sys-color-primary);
-    }
-    a {
-      &:link, &:visited {
-        color: var(--md-sys-color-primary);
-      }
-      &:hover, &:active {
-        background-color: var(--md-sys-color-primary-container);
-        color: var(--md-sys-color-on-primary-container);
+    div {
+      &.layout-container {
+        h1, h2 {
+          color: var(--md-sys-color-primary);
+        }
+        a {
+          &:link, &:visited {
+            color: var(--md-sys-color-primary);
+          }
+          &:hover, &:active {
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+          }
+        }
       }
     }
   }
