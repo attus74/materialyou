@@ -29,7 +29,6 @@ body {
     &.materialyou-layout-container {
       header {
         &.materialyou-top-app-bar {
-          border: 1px dashed #d00;
           @include materialyou-top-app-bar--small;
         }
       }
@@ -44,6 +43,59 @@ body {
             background-color: var(--md-sys-color-secondary-container);
             color: var(--md-sys-color-on-secondary-container);
             transition: background-color 250ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  div {
+    &.materialyou-layout-container {
+      header {
+        &.materialyou-top-app-bar {
+          div {
+            &.region {
+              div {
+                &.block {
+                  float: left;
+                }
+              }
+              nav {
+                &.navigation {
+                  float: right;
+                  div {
+                    &.materialyou-button {
+                      &.materialyou-flat-button {
+                        &.materialyou-menu-button {
+                          float: right;
+                          padding-top: 0;
+                          padding-bottom: 0;
+                        }
+                      }
+                    }
+                  }
+                  @include materialyou-desktop-layout {
+                    ul {
+                      &.menu {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        li {
+                          &.menu-item {
+                            display: inline-block;
+                            margin: 0 0 0 1rem;
+                            padding: 0;
+                            list-style: none;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

@@ -1,0 +1,29 @@
+.materialyou-button {
+  @include materialyou-typography(label, large);
+  padding: 0.625rem 1.25rem;
+  border-radius: 1.25rem;
+  border: none;
+  text-align: center;
+  box-shadow: none;
+  z-index: 0;
+  cursor: pointer;
+  min-width: 3rem;
+  &.materialyou-submit-button {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+  }
+  &.materialyou-flat-button {
+    background: none;
+    color: var(--md-sys-color-primary);
+    &:hover {
+      background-color: var(--md-sys-color-primary-container);
+    }
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  &.materialyou-icon-button {
+    min-width: 0;
+    width: 24px;
+    height: 24px;
+  }
+}

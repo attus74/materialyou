@@ -21,3 +21,20 @@ jQuery(document).ready(() => {
     }
   });
 });
+
+Drupal.behaviors.materialYou = {
+  attach: function (context, settings) {
+    jQuery('nav').not('.materialyou-initialized').each(function() {
+      jQuery(this).find('.materialyou-menu-button').click(function() {
+        var $menu = jQuery(this).parent('nav').find('ul.menu');
+        if ($menu.hasClass('materialyou-menu-open')) {
+          $menu.removeClass('materialyou-menu-open');
+        }
+        else {
+          $menu.addClass('materialyou-menu-open');
+        }
+      });
+      jQuery(this).addClass('materialyou-initialized');
+    });
+  }
+};

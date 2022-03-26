@@ -19,6 +19,15 @@
   }
 }
 
+@mixin materialyou-handset-layout {
+  @media (max-height: 599px) {
+    @content
+  }
+  @media (max-width: 839px) {
+    @content
+  }
+}
+
 @mixin materialyou-desktop-layout {
   @media (min-width: 840px) and (min-height: 600px) {
     @content
@@ -79,6 +88,9 @@ html {
         }
         @include materialyou-layout-top-app-bar {
           position: fixed;
+          @include materialyou-handset-layout {
+            top: 0;
+          }
         }
       }
     }

@@ -8,4 +8,5 @@ materialyou:
   js:
     js/materialyou.js: {}
   dependencies:
+    - core/drupal
     - core/jquery

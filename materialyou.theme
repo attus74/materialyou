@@ -47,3 +47,14 @@ function materialyou_preprocess_page(&$variables): void
 {
   $variables['header_attributes'] = new Attribute();
 }
+
+/**
+ * Implements hook_preprocess_HOOK()
+ */
+function materialyou_preprocess_input(&$variables): void
+{
+  if ($variables['element']['#type'] === 'submit') {
+    $variables['attributes']['class'][] = 'materialyou-button';
+    $variables['attributes']['class'][] = 'materialyou-submit-button';
+  }
+}
