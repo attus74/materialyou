@@ -117,3 +117,28 @@ html {
     }
   }
 }
+
+@mixin materialyou-content-container {
+  @include materialyou-phone-layout {
+    margin: 0 0.5rem;
+  }
+  @include materialyou-phone-landscape-layout {
+    margin: 0 0.5rem;
+  }
+  @include materialyou-tablet-layout {
+    margin: 0 1rem;
+  }
+  @include materialyou-desktop-layout {
+    margin: 0 2rem;
+  }
+}
+
+div {
+  &.view {
+    div {
+      &.view-content {
+        @include materialyou-content-container;
+      }
+    }
+  }
+}

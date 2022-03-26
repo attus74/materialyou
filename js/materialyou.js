@@ -27,11 +27,14 @@ Drupal.behaviors.materialYou = {
     jQuery('nav').not('.materialyou-initialized').each(function() {
       jQuery(this).find('.materialyou-menu-button').click(function() {
         var $menu = jQuery(this).parent('nav').find('ul.menu');
+        var $header = jQuery(this).parents('header.materialyou-top-app-bar');
         if ($menu.hasClass('materialyou-menu-open')) {
           $menu.removeClass('materialyou-menu-open');
+          $header.removeClass('header-overflow');
         }
         else {
           $menu.addClass('materialyou-menu-open');
+          $header.addClass('header-overflow');
         }
       });
       jQuery(this).addClass('materialyou-initialized');

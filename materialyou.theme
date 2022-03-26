@@ -51,6 +51,19 @@ function materialyou_preprocess_page(&$variables): void
 /**
  * Implements hook_preprocess_HOOK()
  */
+function materialyou_preprocess_node(&$variables): void
+{
+  if ($variables['teaser']) {
+    $variables['attributes']['class'][] = 'materialyou-card';
+    $variables['attributes']['class'][] = 'materialyou-card-filled';
+    $variables['title_attributes']['class'][] = 'materialyou-card-title';
+    $variables['content_attributes']['class'][] = 'materialyou-card-content';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK()
+ */
 function materialyou_preprocess_input(&$variables): void
 {
   if ($variables['element']['#type'] === 'submit') {

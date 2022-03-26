@@ -38,6 +38,22 @@ html body {
     top: 79px; }
 
 @media (max-width: 599px) {
+  div.view div.view-content {
+    margin: 0 0.5rem; } }
+@media (max-height: 599px) and (orientation: landscape) {
+  div.view div.view-content {
+    margin: 0 0.5rem; } }
+@media (min-width: 600px) and (max-width: 839px) {
+  div.view div.view-content {
+    margin: 0 1rem; } }
+@media (min-height: 600px) and (orientation: landscape) and (max-width: 839px) {
+  div.view div.view-content {
+    margin: 0 1rem; } }
+@media (min-width: 840px) and (min-height: 600px) {
+  div.view div.view-content {
+    margin: 0 2rem; } }
+
+@media (max-width: 599px) {
   html {
     font-size: 13px; } }
 @media (max-height: 599px) and (orientation: landscape) {
@@ -533,6 +549,8 @@ body div.materialyou-layout-container header.materialyou-top-app-bar {
   font-size: var(--md-sys-typescale-title-large-size);
   font-weight: var(--md-sys-typescale-title-large-weight);
   transition: background-color 250ms; }
+  body div.materialyou-layout-container header.materialyou-top-app-bar.header-overflow {
+    z-index: 32; }
   body div.materialyou-layout-container header.materialyou-top-app-bar div.region {
     padding-top: 1.125rem;
     padding-bottom: 1.125rem; }
@@ -653,5 +671,62 @@ nav.materialyou-menu ul.menu {
     display: block; }
   nav.materialyou-mobile-menu div.materialyou-menu-button {
     display: none; } }
+
+.materialyou-card {
+  border-radius: 0.75rem;
+  margin: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  @media (min-width: 600px) and (max-width: 839px) {
+    .materialyou-card {
+      margin: 1rem; } }
+  @media (min-height: 600px) and (orientation: landscape) and (max-width: 839px) {
+    .materialyou-card {
+      margin: 1rem; } }
+  @media (min-width: 840px) and (min-height: 600px) {
+    .materialyou-card {
+      margin: 1.5rem; } }
+  .materialyou-card > h1, .materialyou-card > h2, .materialyou-card > h3, .materialyou-card > h4, .materialyou-card > footer {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  .materialyou-card .materialyou-card-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0; }
+  .materialyou-card footer.node__meta {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem; }
+  .materialyou-card .materialyou-card-content .field {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    .materialyou-card .materialyou-card-content .field.field--type-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem; }
+    @media (orientation: landscape) {
+      .materialyou-card .materialyou-card-content .field.field--type-image {
+        float: left;
+        width: 33.3333%;
+        max-width: 320px; } }
+  .materialyou-card .materialyou-card-content .node__links {
+    text-align: right;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+    .materialyou-card .materialyou-card-content .node__links ul.links {
+      font-family: var(--md-sys-typescale-label-large-font);
+      line-height: var(--md-sys-typescale-label-large-line-height);
+      font-size: var(--md-sys-typescale-label-large-size);
+      font-weight: var(--md-sys-typescale-label-large-weight); }
+  .materialyou-card.materialyou-card-elevated {
+    background-color: var(--md-sys-color-surface);
+    z-index: 16;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .materialyou-card.materialyou-card-filled {
+    background-color: var(--md-sys-color-surface-variant); }
+  .materialyou-card.materialyou-card-outlined {
+    background-color: var(--md-sys-color-surface);
+    border: 1px solid var(--md-sys-color-outline); }
 
 /*# sourceMappingURL=materialyou.css.map */

@@ -7,6 +7,9 @@
   color: var(--md-sys-color-on-background);
   @include materialyou-typography(title, large);
   transition: background-color 250ms;
+  &.header-overflow {
+    z-index: 32;
+  }
   div {
     &.region {
       padding-top: 1.125rem;
