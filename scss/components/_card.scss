@@ -4,10 +4,10 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   @include materialyou-tablet-layout {
-    margin: 1rem;
+    margin: 1rem 0;
   } 
   @include materialyou-desktop-layout {
-    margin: 1.5rem;
+    margin: 1.5rem 0;
   }
   & > h1, & > h2, & > h3, & > h4, & > footer {
     padding-left: 1rem;

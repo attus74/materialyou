@@ -91,6 +91,24 @@ body {
                             margin: 0 0 0 1rem;
                             padding: 0;
                             list-style: none;
+                            a {
+                              display: flex;
+                              span {
+                                &.menu-icon {
+                                  height: 24px;
+                                  padding-top: calc(0.875rem - 12px);
+                                  padding-bottom: calc(0.875rem - 12px);
+                                  flex: 1 1;
+                                  min-width: 24px;
+                                  max-width: 24px;
+                                }
+                                &.menu-label {
+                                  height: 1.75rem;
+                                  flex: 2 2;
+                                  padding-left: 0.75rem;
+                                }
+                              }
+                            }
                           }
                         }
                       }

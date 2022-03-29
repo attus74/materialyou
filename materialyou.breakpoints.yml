@@ -1,0 +1,19 @@
+## Breakpoints
+---
+
+materialyou.phone:
+  label: Phone
+  mediaQuery: '(max-width: 599px)'
+  weight: 0
+materialyou.tablet:
+  label: Tablet
+  mediaQuery: '(min-width: 600px) and (max-width: 839px)'
+  weight: 1
+materialyou.desktop:
+  label: Desktop
+  mediaQuery: '(min-width: 840px) and (max-width: 1439px)'
+  weight: 2
+materialyou.large:
+  label: Large
+  mediaQuery: '(min-width: 1440px)'
+  weight: 3

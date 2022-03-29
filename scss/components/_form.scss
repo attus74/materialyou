@@ -1,0 +1,45 @@
+form {
+  .materialyou-form-element {
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+    border: 1px solid var(--md-sys-color-outline);
+    border-radius: 0.25rem;
+    &.processing {
+      background-color: var(--md-sys-color-primary-container);
+    }
+    label {
+      display: block;
+      color: var(--md-sys-color-on-surface);
+      position: relative;
+      top: 0;
+      left: 0;
+      transition: top 200ms, left 200ms, font-size 250ms;
+    }
+    input, select, textarea {
+      display: block;
+      margin: 0;
+      max-width: calc(100% - 1rem);
+      background: transparent;
+      border: none;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      padding: 0.25rem 0.5rem;
+    }
+    &.focused {
+      border-color: var(--md-sys-color-primary);
+      label {
+        color: var(--md-sys-color-primary);
+      }
+    }
+    &.empty {
+      &:not(.focused) {
+        label {
+          font-size: 1rem;
+          top: 1.5rem;
+          left: 0.5rem;
+          transition: top 250ms, left 250ms, font-size 250ms;
+        }
+      }
+    }
+  }
+}

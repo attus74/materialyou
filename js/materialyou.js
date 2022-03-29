@@ -39,5 +39,38 @@ Drupal.behaviors.materialYou = {
       });
       jQuery(this).addClass('materialyou-initialized');
     });
+    jQuery('.materialyou-form-element').each(function() {
+      jQuery(this).materialYouInput();
+    });
   }
+};
+
+jQuery.fn.materialYouInput = function() {
+  var $element = jQuery(this);
+  $element.addClass('processing');
+  var $input;
+  if ($element.find('input').length > 0) {
+    $input = $element.find('input');
+  }
+  else if ($element.find('select').length > 0) {
+    $input = $element.find('select');
+  }
+  else if ($element.find('textarea').length > 0) {
+    $input = $element.find('textarea');
+  }
+  console.debug($input);
+  if (!$element.hasClass('processed')) {
+    $input.focus(() => $element.addClass('focused'));
+    $input.blur(() => $element.removeClass('focused'));
+    $input.focusout(() => $element.removeClass('focused'));
+    $input.change(() => $element.materialYouInput());
+  }
+  if ($input.val() === '' || $input.val() === null) {
+    $element.addClass('empty');
+  }
+  else {
+    $element.removeClass('empty');
+  }
+  $element.addClass('processed');
+  $element.removeClass('processing');
 };

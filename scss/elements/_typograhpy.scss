@@ -170,3 +170,23 @@ html {
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
+
+.field {
+  &.field--type-text-long {
+    @include materialyou-typography(body, medium);
+    h2 {
+      @include materialyou-typography(headline, medium);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0.75rem;
+      padding-bottom: 0.25rem;
+    }
+    h3 {
+      @include materialyou-typography(headline, small);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 0.75rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+}

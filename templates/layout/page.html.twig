@@ -1,5 +1,9 @@
 <div class="layout-container materialyou-layout-container">
   
+  <nav role="main-navigation" class="materialyou-navigation">
+    {{ page.navigation }}
+  </nav>
+  
   <header role="banner" {{ header_attributes.addClass('materialyou-top-app-bar') }}>
     {{ page.topappbar }}
   </header>

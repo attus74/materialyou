@@ -10,6 +10,7 @@ base theme: classy
 regions:
   topappbar: Top App Bar
   content: Content
+  navigation: Navigation
 libraries:
   - materialyou/materialyou
 interface translation project: materialyou

@@ -9,6 +9,8 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Implements hook_form_FORM_ID_alter()
@@ -30,6 +32,22 @@ function materialyou_form_system_theme_settings_alter(&$form, FormStateInterface
         'green'       => t('Green'),
         'blue'        => t('Blue'),
         'orange'      => t('Orange'),
+      ],
+    ],
+    'node--teaser' => [
+      '#type' => 'select',
+      '#title' => t('Content Teaser'),
+      '#description' => Link::fromTextAndUrl(t('Details and examples'), 
+          Url::fromUri('https://m3.material.io/components/cards/overview'),
+          ['attributes' => [
+            'target' => '_blank',
+          ]]),
+      '#default_value' => theme_get_setting('node--teaser'),
+      '#required' => true,
+      '#options' => [
+        'elevated' => t('Elevated'),
+        'filled' => t('Filled'),
+        'outlined' => t('Outlined'),
       ],
     ],
   ];
@@ -55,7 +73,7 @@ function materialyou_preprocess_node(&$variables): void
 {
   if ($variables['teaser']) {
     $variables['attributes']['class'][] = 'materialyou-card';
-    $variables['attributes']['class'][] = 'materialyou-card-filled';
+    $variables['attributes']['class'][] = 'materialyou-card-' . theme_get_setting('node--teaser');
     $variables['title_attributes']['class'][] = 'materialyou-card-title';
     $variables['content_attributes']['class'][] = 'materialyou-card-content';
   }
@@ -69,5 +87,42 @@ function materialyou_preprocess_input(&$variables): void
   if ($variables['element']['#type'] === 'submit') {
     $variables['attributes']['class'][] = 'materialyou-button';
     $variables['attributes']['class'][] = 'materialyou-submit-button';
+  }
+}
+
+/**
+ * Implements hook_preprocess_hook()
+ */
+function materialyou_preprocess_form_element(&$variables): void
+{
+  if ($variables['element']['#type'] == 'textfield'
+      || $variables['element']['#type'] == 'password'
+      || $variables['element']['#type'] == 'textarea'
+      || $variables['element']['#type'] == 'select') {
+    $variables['attributes']['class'][] = 'materialyou-form-element';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK()
+ */
+function materialyou_preprocess_menu(&$variables): void
+{
+  foreach($variables['items'] as $index => $item) {
+    if (!array_key_exists('icon', $item)) {
+      switch($item['url']->getRouteName()) {
+        case '<front>':
+          $variables['items'][$index]['icon'] = 'home';
+          break;
+        case 'user.page':
+          $variables['items'][$index]['icon'] = 'person';
+          break;
+        case 'user.logout':
+          $variables['items'][$index]['icon'] = 'logout';
+          break;
+        default:
+          $variables['items'][$index]['icon'] = 'navigate_next';
+      }
+    }
   }
 }

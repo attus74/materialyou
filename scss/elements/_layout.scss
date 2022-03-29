@@ -74,6 +74,21 @@ html {
       left: 0;
       right: 0;
     }
+    @include materialyou-phone-layout {
+      padding-bottom: 6rem;
+    }
+    @include materialyou-tablet-layout {
+      @include materialyou-layout-container {
+        padding-left: 5rem;
+      }
+    }
+    @include materialyou-desktop-layout {
+      @include materialyou-layout-container {
+        & > main {
+          padding-left: 22.5rem;
+        }
+      }
+    }
     &.toolbar-vertical {
       @include materialyou-layout-container {
         padding-top: 0.5rem;
@@ -90,6 +105,27 @@ html {
           position: fixed;
           @include materialyou-handset-layout {
             top: 0;
+          }
+        }
+        &.toolbar-fixed {
+          @include materialyou-layout-top-app-bar {
+            @include materialyou-handset-layout {
+              top: 39px;
+            }
+          }
+        }
+      }
+      &.toolbar-tray-open {
+        @include materialyou-tablet-layout {
+          @include materialyou-layout-container {
+            padding-left: 0;
+          }
+        }
+        @include materialyou-desktop-layout {
+          @include materialyou-layout-container {
+            & > main {
+              padding-left: 0;
+            }
           }
         }
       }
@@ -129,7 +165,11 @@ html {
     margin: 0 1rem;
   }
   @include materialyou-desktop-layout {
-    margin: 0 2rem;
+    margin: 0 2rem 0 1rem;
+    @media (min-width: 1344px) {
+      width: 1280px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -139,6 +179,43 @@ div {
       &.view-content {
         @include materialyou-content-container;
       }
+    }
+  }
+}
+
+main {
+  h1 {
+    @include materialyou-content-container;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+  }
+  .node {
+    &.node--view-mode-full {
+      footer {
+        @include materialyou-content-container;
+        padding-top: 0;
+        padding-bottom: 0.5rem;
+      }
+      .node__content {
+        & > .field {
+          @include materialyou-content-container;
+          &.field--type-image {
+            img {
+              width: 100%;
+              height: auto;
+              border-radius: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  form {
+    @include materialyou-content-container;
+  }
+  ul {
+    &.tabs {
+      @include materialyou-content-container;
     }
   }
 }

@@ -17,3 +17,30 @@ msgstr "Felső Eszköztár"
 
 msgid "Colors"
 msgstr "Színek"
+
+msgid "Red"
+msgstr "Piros"
+
+msgid "Green"
+msgstr "Zöld"
+
+msgid "Blue"
+msgstr "Kék"
+
+msgid "Orange"
+msgstr "Narancs"
+
+msgid "Content Teaser"
+msgstr "Tartalom előnézete"
+
+msgid "Details and examples"
+msgstr "Leírás és minták"
+
+msgid "Elevated"
+msgstr "Kiemelt"
+
+msgid "Filled"
+msgstr "Eltérő háttér"
+
+msgid "Outlined"
+msgstr "Körvonal"

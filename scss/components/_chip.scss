@@ -1,0 +1,25 @@
+@mixin materialyou-chips {
+  padding: 1rem 0;
+}
+@mixin materialyou-chip {
+  z-index: 0;
+  border: 1px solid var(--md-sys-color-outline);
+  color: var(--md-sys-color-on-surface);
+  @include materialyou-typography(label, large);
+  padding: 0.375rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.field {
+  &.field--name-field-tags {
+    @include materialyou-chips;
+    .field__item {
+      display: inline-block;
+      a {
+        @include materialyou-chip;
+      }
+    }
+  }
+}
