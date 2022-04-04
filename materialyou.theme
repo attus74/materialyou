@@ -120,6 +120,9 @@ function materialyou_preprocess_menu(&$variables): void
         case 'user.logout':
           $variables['items'][$index]['icon'] = 'logout';
           break;
+        case 'user.login':
+          $variables['items'][$index]['icon'] = 'login';
+          break;
         default:
           $variables['items'][$index]['icon'] = 'navigate_next';
       }
