@@ -733,6 +733,9 @@ body.document-scrolled div.materialyou-layout-container header.materialyou-top-a
 
 body div.materialyou-layout-container header.materialyou-top-app-bar div.region div.block {
   float: left; }
+  body div.materialyou-layout-container header.materialyou-top-app-bar div.region div.block div.materialyou-button.materialyou-flat-button {
+    padding-top: 0;
+    padding-bottom: 0; }
 body div.materialyou-layout-container header.materialyou-top-app-bar div.region nav.navigation {
   float: right; }
   body div.materialyou-layout-container header.materialyou-top-app-bar div.region nav.navigation div.materialyou-button.materialyou-flat-button.materialyou-menu-button {
@@ -775,7 +778,8 @@ body div.materialyou-layout-container header.materialyou-top-app-bar div.region 
   box-shadow: none;
   z-index: 0;
   cursor: pointer;
-  min-width: 3rem; }
+  min-width: 3rem;
+  position: relative; }
   .materialyou-button.materialyou-submit-button {
     background-color: var(--md-sys-color-primary);
     color: var(--md-sys-color-on-primary); }
@@ -790,6 +794,16 @@ body div.materialyou-layout-container header.materialyou-top-app-bar div.region 
     min-width: 0;
     width: 24px;
     height: 24px; }
+  .materialyou-button p.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 0.125rem;
+    border-radius: 0.5rem;
+    z-index: 8;
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container); }
 
 nav.materialyou-menu ul.menu {
   display: none;
@@ -885,11 +899,29 @@ nav.materialyou-menu ul.menu {
   .materialyou-card > h1, .materialyou-card > h2, .materialyou-card > h3, .materialyou-card > h4, .materialyou-card > footer {
     padding-left: 1rem;
     padding-right: 1rem; }
+  .materialyou-card .materialyou-card-avatar {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    float: left;
+    border-radius: 1.5rem; }
   .materialyou-card .materialyou-card-title {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0; }
+  .materialyou-card .materialyou-card-subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: var(--md-sys-typescale-title-medium-font);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+    font-size: var(--md-sys-typescale-title-medium-size);
+    font-weight: var(--md-sys-typescale-title-medium-weight); }
   .materialyou-card footer.node__meta {
     padding-top: 0.5rem;
     padding-bottom: 1rem; }

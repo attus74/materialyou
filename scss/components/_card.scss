@@ -13,11 +13,28 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .materialyou-card-avatar {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    float: left;
+    border-radius: 1.5rem;
+  }
   .materialyou-card-title {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .materialyou-card-subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include materialyou-typography(title, medium);
   }
   footer {
     &.node__meta {

@@ -20,3 +20,21 @@ function yourmodule_preprocess_menu(&$variables): void
   }
 }
 ```
+
+## How to create Material Elements through Javascript or custom PHP
+
+# Button 
+```html
+<div class="materialyou-button materialyou-flat-button materialyou-icon-button">
+  <span class="material-icons">refresh</span>
+  <p class="badge">969</p>
+</div> 
+```
+
+# Card 
+```html
+<div class="materialyou-card materialyou-card-filled">
+  <h3 class="materialyou-card-title">Title</h3>
+  <p class="materialyou-card-subtitle">Subtitle</p>
+</div>
+```
