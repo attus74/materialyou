@@ -65,6 +65,7 @@
   top: 0;
   left: 0;
   right: 0;
+  width: 5rem;
   @include materialyou-tablet-layout {
     top: calc(39px + 4rem);
   }

@@ -166,7 +166,7 @@ html {
   }
   @include materialyou-desktop-layout {
     margin: 0 2rem 0 1rem;
-    @media (min-width: 1344px) {
+    @media (min-width: 1770px) {
       width: 1280px;
       margin: 0 auto;
     }

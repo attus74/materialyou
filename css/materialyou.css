@@ -79,7 +79,7 @@ html body {
 @media (min-width: 840px) and (min-height: 600px) {
   div.view div.view-content {
     margin: 0 2rem 0 1rem; } }
-  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1344px) {
+  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1770px) {
     div.view div.view-content {
       width: 1280px;
       margin: 0 auto; } }
@@ -102,7 +102,7 @@ main h1 {
   @media (min-width: 840px) and (min-height: 600px) {
     main h1 {
       margin: 0 2rem 0 1rem; } }
-  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1344px) {
+  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1770px) {
     main h1 {
       width: 1280px;
       margin: 0 auto; } }
@@ -125,7 +125,7 @@ main .node.node--view-mode-full footer {
   @media (min-width: 840px) and (min-height: 600px) {
     main .node.node--view-mode-full footer {
       margin: 0 2rem 0 1rem; } }
-  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1344px) {
+  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1770px) {
     main .node.node--view-mode-full footer {
       width: 1280px;
       margin: 0 auto; } }
@@ -145,7 +145,7 @@ main .node.node--view-mode-full footer {
 @media (min-width: 840px) and (min-height: 600px) {
   main .node.node--view-mode-full .node__content > .field {
     margin: 0 2rem 0 1rem; } }
-  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1344px) {
+  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1770px) {
     main .node.node--view-mode-full .node__content > .field {
       width: 1280px;
       margin: 0 auto; } }
@@ -169,7 +169,7 @@ main .node.node--view-mode-full .node__content > .field.field--type-image img {
 @media (min-width: 840px) and (min-height: 600px) {
   main form {
     margin: 0 2rem 0 1rem; } }
-  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1344px) {
+  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1770px) {
     main form {
       width: 1280px;
       margin: 0 auto; } }
@@ -189,7 +189,7 @@ main .node.node--view-mode-full .node__content > .field.field--type-image img {
 @media (min-width: 840px) and (min-height: 600px) {
   main ul.tabs {
     margin: 0 2rem 0 1rem; } }
-  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1344px) {
+  @media (min-width: 840px) and (min-height: 600px) and (min-width: 1770px) {
     main ul.tabs {
       width: 1280px;
       margin: 0 auto; } }
@@ -1076,6 +1076,7 @@ ul.tabs a {
     top: 0;
     left: 0;
     right: 0;
+    width: 5rem;
     z-index: 0;
     background-color: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface-variant); } }
@@ -1127,6 +1128,7 @@ ul.tabs a {
     top: 0;
     left: 0;
     right: 0;
+    width: 5rem;
     z-index: 0;
     background-color: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface-variant); } }
